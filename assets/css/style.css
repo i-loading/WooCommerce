@@ -136,11 +136,10 @@ header {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-left: 38px;
 }
 
-.header_wrapper nav .menu li {
-  padding-right: 38px;
+.header_wrapper nav .menu li + li {
+  padding-left: 38px;
 }
 
 .header_wrapper .register {
@@ -235,7 +234,7 @@ header {
 .main-section .profits .profits_item h4 {
   font-weight: bold;
   font-size: 36px;
-  line-height: 70px;
+  line-height: 50px;
   color: #272D4E;
   padding-left: 40px;
 }
@@ -283,7 +282,7 @@ header {
 }
 
 .pros-section .pros .profit_desc {
-  max-width: 480px;
+  max-width: 450px;
 }
 
 .pros-section .pros .profit_desc h3 {
@@ -298,6 +297,7 @@ header {
   margin-bottom: 40px;
   line-height: 30px;
   color: #FFFFFF;
+  text-align: left;
 }
 
 .pros-section .pros .profit_desc .read {
@@ -306,6 +306,7 @@ header {
   background: #70C217;
   border-radius: 60px;
   padding: 22px 26px;
+  display: inline-block;
 }
 
 .pros-section .first-row {
@@ -495,7 +496,7 @@ footer .warranty {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 45px 0 135px;
+  padding: 45px 0 105px;
 }
 
 footer .warranty .warranty_item {
@@ -505,6 +506,7 @@ footer .warranty .warranty_item {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 10px;
 }
 
 footer .warranty .warranty_item p {
@@ -557,6 +559,7 @@ footer .info .info_item {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  margin: 20px;
 }
 
 footer .info .info_item h5 {
@@ -596,7 +599,7 @@ footer .copyright .socials {
   align-items: center;
 }
 
-footer .copyright .socials img {
+footer .copyright .socials a {
   margin-right: 50px;
   display: inline-block;
 }
@@ -605,6 +608,7 @@ footer .copyright .bottom-text {
   font-size: 12px;
   line-height: 22px;
   color: #272D4E;
+  text-align: center;
 }
 
 @media screen and (max-width: 1496px) {
@@ -685,6 +689,7 @@ footer .copyright .bottom-text {
 
   .people-section .reason a {
     margin-bottom: 40px;
+    margin-left: 0;
   }
 }
 
@@ -711,11 +716,7 @@ footer .copyright .bottom-text {
   }
 }
 
-@media screen and (max-width: 990px) {
-  .pros-section .second-row {
-    margin-left: 0;
-  }
-
+@media screen and (max-width: 1060px) {
   footer .warranty {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -728,10 +729,19 @@ footer .copyright .bottom-text {
     -ms-flex-pack: center;
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 990px) {
+  .pros-section .second-row {
+    margin-left: 0;
+  }
 
   footer .info {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   footer .copyright {
@@ -777,6 +787,15 @@ footer .copyright .bottom-text {
 }
 
 @media screen and (max-width: 860px) {
+  .pros-section .pros .profit_desc {
+    text-align: center;
+  }
+
+  .pros-section .pros .profit_desc h3 {
+    text-align: center;
+    margin-top: 10px;
+  }
+
   .pros-section .first-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -817,6 +836,10 @@ footer .copyright .bottom-text {
   header {
     background: none;
   }
+
+  .header_wrapper {
+    padding-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 645px) {
@@ -833,25 +856,48 @@ footer .copyright .bottom-text {
     justify-content: center;
   }
 
+  .header_wrapper nav .menu li + li {
+    padding-left: 0;
+  }
+
   .header_wrapper nav .menu li {
     padding-right: 0;
     padding-bottom: 15px;
   }
 }
 
-@media screen and (max-width: 610px) {
-  .people-section {
-    background-position: center 44%;
-  }
-}
-
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 630px) {
   .header_desc h1 {
     max-width: 100%;
     font-size: 40px;
     line-height: 45px;
   }
+}
 
+@media screen and (max-width: 620px) {
+  .comments-section .slider {
+    padding: 20px 40px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .people-section {
+    background-position: center 37%;
+  }
+
+  .people-section p {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .people-section {
+    background-position: center 41%;
+  }
+}
+
+@media screen and (max-width: 510px) {
   .header_desc .start {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -863,6 +909,7 @@ footer .copyright .bottom-text {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    padding-bottom: 120px;
   }
 
   .header_desc .start p {
@@ -871,6 +918,24 @@ footer .copyright .bottom-text {
 
   .pros-section .pros img {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .people-section {
+    background-position: center 39%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .comments-section .slider {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .people-section {
+    background-position: center 36%;
   }
 }
 
@@ -889,8 +954,14 @@ footer .copyright .bottom-text {
     margin-left: 0;
   }
 
-  footer .copyright .socials img {
+  footer .copyright .socials a {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .people-section {
+    background-position: center 41%;
   }
 }
